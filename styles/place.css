@@ -3,6 +3,7 @@
 
 :root {
     --background-color-transparent: rgba(211, 223, 34, 0.738);
+    --header-color: rgb(199, 205, 161);
 }
 * {
     margin: 0;
@@ -13,7 +14,7 @@
 }
 
 header, footer{
-    background-color:antiquewhite;
+    background-color:var(--header-color);
     margin: 10px auto;
     text-align: center;
     padding: .5rem;
