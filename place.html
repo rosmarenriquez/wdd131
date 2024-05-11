@@ -14,45 +14,40 @@
 </head>
 
 <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
     <header>
-        <div class="title">
-            <h1>Medellin, CO</h1>
-        </div>
+        <h1>Medellin, CO</h1>
     </header>
 
     <main>
         
         <picture>
-            <source srcset="images/medellin.webp" media="(min-width: 600px)" width="1920" height="1080">
-            <img src="images/medellin-small.webp" alt="Medellin Picture" width="427" height="640">
+            <source srcset="images/medellin.webp" media="(min-width: 1000px)">
+            <img src="images/medellin-small.webp" alt="Medellin Picture">
         </picture>
         
-        <div class="data">
+        <div id="data">
             <h2>Data</h2>
             <ul>
-                <li><strong>Area: </strong>146.97 sq mi</li>
-                <li><strong>Population: </strong>4,137,000 (2024)</li>
-                <li><strong>Capital: </strong>Medellin is actually the capital of Antioquia</li>
-                <li><strong>Languages: </strong>Spanish</li>
-                <li><strong>Currency: </strong>Colombian peso (COP)</li>
-                <li><strong>Time Zone: </strong>UTC-5</li>
-                <li><strong>Calling Code: </strong>+57 604</li>
-                <li><strong>Internet TLD: </strong>.co</li>
+                <li><b>Area:</b> 146.97 sq mi</li>
+                <li><b>Population:</b> 4,137,000 (2024)</li>
+                <li><b>Capital:</b>Medellin is actually the capital of Antioquia</li>
+                <li><b>Languages:</b>Spanish</li>
+                <li><b>Currency:</b>Colombian peso (COP)</li>
+                <li><b>Time Zone:</b>UTC-5</li>
+                <li><b>Calling code:</b>+57 604</li>
+                <li><b>Internet TLD:</b>.co</li>
             </ul>
         </div>
        
-        <div class="weather">
-            <h2 class="weather-header">Weather</h2>
-            
-            <picture class="weather-icon">
-                <source srcset="images/weather-icon.svg">
-                <img src="images/weather-icon.svg" alt="Cloudy" width="50" height="50">
-            </picture>
+        <div id="weather">
+            <h2>Weather</h2>        
+            <img id="sun" src="images/weather-icon.svg" alt="cloudy" width="200">
             <ul>
-                <li><strong>Temperature: </strong>24°C</li>
-                <li><strong>Conditions: </strong>Cloudy</li>
-                <li><strong>Wind: </strong>10 km/h</li>
-                <li><strong>Wind Chill: </strong><span id="windchill"></span></li>
+                <li><b>Temperature:</b>24°C</li>
+                <li><b>Conditions:</b>Cloudy</li>
+                <li><b>Wind:</b>10 km/h</li>
+                <li><b>Wind Chill:</b><span id="windchill"></span></li>
             </ul>
         </div>
     </main>
