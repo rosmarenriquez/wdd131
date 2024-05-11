@@ -3,55 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Place Assignment</title>
+    <title>WDD 131 - Dynamic Web Fundamentals - Place Assignment</title>
     <meta name="author" content="Rosmar Enriquez">
     <meta name="description" content="This site shows you information regarding a place I have visited.
     It's a practice to check understanding in Javascript and responsive sites.">
     <link href="styles/place.css" rel="stylesheet">
-    <link href=" " rel="stylesheet">
+    <link href="styles/place-large.css" rel="stylesheet">
     <script src="scripts/place.js" defer></script>
     <script src="scripts/getdates.js" defer></script>
 </head>
+
 <body>
     <header>
         <div class="title">
-            <h1>Utah</h1>
+            <h1>Medellin, CO</h1>
         </div>
     </header>
 
     <main>
-        <!-- Main Picture -->
+        
         <picture>
-            <source srcset="images/utah-large.webp" media="(min-width: 600px)" width="1920" height="1080">
-            <img src="images/utah-small.webp" alt="Utah Outdoors Picture" width="427" height="640">
+            <source srcset="images/medellin.webp" media="(min-width: 600px)" width="1920" height="1080">
+            <img src="images/medellin-small.webp" alt="Medellin Picture" width="427" height="640">
         </picture>
-        <!-- Data Section -->
+        
         <div class="data">
             <h2>Data</h2>
             <ul>
-                <li><strong>Area: </strong>84,819 sq miles</li>
-                <li><strong>Population: </strong>3,454,232 (Jan 2024)</li>
-                <li><strong>Capital: </strong>Salt Lake City</li>
-                <li><strong>Languages: </strong>English</li>
-                <li><strong>Currency: </strong>U.S Dollars</li>
-                <li><strong>Time Zone: </strong>UTC-6</li>
-                <li><strong>Calling Code: </strong>801, 385, 435</li>
-                <li><strong>Internet TLD: </strong>.us</li>
+                <li><strong>Area: </strong>146.97 sq mi</li>
+                <li><strong>Population: </strong>4,137,000 (2024)</li>
+                <li><strong>Capital: </strong>Medellin is actually the capital of Antioquia</li>
+                <li><strong>Languages: </strong>Spanish</li>
+                <li><strong>Currency: </strong>Colombian peso (COP)</li>
+                <li><strong>Time Zone: </strong>UTC-5</li>
+                <li><strong>Calling Code: </strong>+57 604</li>
+                <li><strong>Internet TLD: </strong>.co</li>
             </ul>
         </div>
-        <!-- Weather Section -->
+       
         <div class="weather">
             <h2 class="weather-header">Weather</h2>
             
             <picture class="weather-icon">
                 <source srcset="images/weather-icon.svg">
-                <img src="images/weather-icon.svg" alt="Partly Cloudy" width="50" height="50">
+                <img src="images/weather-icon.svg" alt="Cloudy" width="50" height="50">
             </picture>
             <ul>
-                <li><strong>Temperature: </strong>53°F</li>
-                <li><strong>Conditions: </strong>Partly Cloudy</li>
-                <li><strong>Wind: </strong>7 mph</li>
-                <li><strong>Wind Chill: </strong><span id="windChill"></span></li>
+                <li><strong>Temperature: </strong>24°C</li>
+                <li><strong>Conditions: </strong>Cloudy</li>
+                <li><strong>Wind: </strong>10 km/h</li>
+                <li><strong>Wind Chill: </strong><span id="windchill"></span></li>
             </ul>
         </div>
     </main>
