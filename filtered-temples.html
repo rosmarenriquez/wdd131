@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture Album | Responsive Site</title>
+    <meta name="author" content="Rosmar Enriquez">
+    <meta name="description" content="This site shows you an album of pictures. The site gets ajusted
+    for changing window sizes.">
+    <link href="styles/filtered-temples.css" rel="stylesheet">
+    <link href="styles/filtered-temples-large.css" rel="stylesheet">
+    <script src="scripts/filtered-temples.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+</head>
+
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <button id="hamburguer-menu"></button>
+    <header>
+        <h1>Temple Album</h1>
+        <nav class="navi">
+            <a href="#">Home</a>
+            <a href="#">Old</a>
+            <a href="#">New</a>
+            <a href="#">Large</a>
+            <a href="#">Small</a>
+        </nav>
+    </header>
+    <h2>Home</h2>
+    <main>
+        <figure>
+            <img class="img1" src="images/rio-de-janeiro-temple.jpg">
+            <figcaption>Rio de Janeiro Brazil Temple</figcaption>
+        </figure>
+        <figure>
+            <img class="img2" src="images/recife-brazil-temple.jpg">
+            <figcaption>Recife Brazil Temple</figcaption>
+        </figure>
+        <figure>
+            <img class="img3" src="images/porto-alegre-brazil-temple.jpg">
+            <figcaption>Porto Alegre Brazil Temple</figcaption>
+        </figure>
+        <figure>
+            <img class="img4" src="images/belem-brazil-temple.jpg">
+            <figcaption>Belem Brazil Temple</figcaption>
+        </figure>
+        <figure>
+            <img class="img5" src="images/brasilia-brazil-temple.jpg">
+            <figcaption>Brasilia Brazil Temple</figcaption>
+        </figure>
+        <figure>
+            <img class="img6" src="images/campinas-brazil-temple.jpg">
+            <figcaption>Campinas Brazil Temple</figcaption>
+        </figure>
+        <figure>
+            <img class="img7" src="images/curitiba-brazil-temple.jpg">
+            <figcaption>Curitiba Brazil Temple</figcaption>
+        </figure>
+        <figure>
+            <img class="img8" src="images/fortaleza-brazil-temple.jpg">
+            <figcaption>Fortaleza Brazil Temple</figcaption>
+        </figure>
+        <figure>
+            <img class="img9" src="images/Manaus-Brazil-Temple.jpg">
+            <figcaption>Manaus Brazil Temple</figcaption>
+        </figure>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentYear"></span> | Rosmar Enriquez | Mexico </p>
+        <p id="lastModified"></p>
+    </footer>
+    
+</body>
+</html>
