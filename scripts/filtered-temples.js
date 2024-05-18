@@ -24,6 +24,7 @@ function scrollFunction() {
 
   document.addEventListener("DOMContentLoaded", function() {
     const mainContent = document.getElementById('main-content');
+    const navLinks = document.querySelectorAll('.navi a');
 
   const temples = [
     {
@@ -139,12 +140,46 @@ function scrollFunction() {
     return card;
 }
 
-// Remove existing content
-mainContent.innerHTML = '';
+function filterTemples(filter) {
+  let filteredTemples = [];
+  const currentYear = new Date().getFullYear();
+  
+  switch(filter) {
+      case 'old':
+          filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() < 1900);
+          break;
+      case 'new':
+          filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() >= 2000);
+          break;
+      case 'large':
+          filteredTemples = temples.filter(temple => temple.area > 90000);
+          break;
+      case 'small':
+          filteredTemples = temples.filter(temple => temple.area < 10000);
+          break;
+      default:
+          filteredTemples = temples;
+          break;
+  }
+  displayTemples(filteredTemples);
+}
 
-// Append new temple cards
-temples.forEach(temple => {
-    const card = createTempleCard(temple);
-    mainContent.appendChild(card);
+function displayTemples(temples) {
+  mainContent.innerHTML = '';
+  temples.forEach(temple => {
+      const card = createTempleCard(temple);
+      mainContent.appendChild(card);
+  });
+}
+
+navLinks.forEach(link => {
+  link.addEventListener('click', function(event) {
+      event.preventDefault();
+      const filter = this.getAttribute('data-filter');
+      filterTemples(filter);
+  });
 });
+
+// Display all temples by default
+displayTemples(temples);
 });
