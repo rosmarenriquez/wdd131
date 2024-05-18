@@ -3,64 +3,9 @@
 
 body{
     margin: 0;
-    background-color: rgb(246, 229, 206);
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('https://example.com/your-image.jpg') no-repeat center center fixed;
+    background-size: cover;
     font-family: "Jaro", sans-serif;
-}
-
-/*phone view */
-#hamburguer-menu {
-	font-size: 1.5rem;
-	border: none;
-	background: none;
-	color: green;
-	position: absolute;
-	top: 1rem;
-	right: 1rem;
-    cursor: pointer;
-}
-
-h1,h2{
-	font-family: "Briem Hand", cursive;}
-	h2{
-		text-align: center;
-	}
-
-#hamburguer-menu:before {
-	content: "☰";
-    border: 2px solid #04AA6D;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
-
-#hamburguer-menu.open::before {
-	content: "X";
-}
-
-.navi {
-	
-
-	display: flex;
-	flex-direction: column
-}
-h1 {
-    align-self: flex-start;
-  }
-.navi a {
-	display: none;
-
-	color:rgb(255, 0, 0);
-	text-align: center;
-	padding: 1rem;
-	text-decoration: none;
-}
-.navi a:hover {
-	background-color: #bbb;
-	color: #1319d2;
-	font-weight: 700;
-}
-
-
-.open a {
-	display: block;
 }
 
 header {
@@ -72,20 +17,59 @@ header {
 	box-shadow: 0 0 30px #e56161;
 }
 
-section{ 
-    display: grid;
-    grid-template-columns: 1fr;
+#hamburguer-menu {
+	font-size: 2rem;
+	border: none;
+	background: none;
+	color: green;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+    cursor: pointer;
 }
 
-footer{
+#hamburguer-menu:before {
+	content: "☰";
+}
 
+#hamburguer-menu.open:before {
+	content: "X";
+}
+
+.navi {
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+}
+
+.navi a {
+    color: #1319d2;
+	display: none;
 	text-align: center;
-	height: fit-content;
-    height: 20vh;
-    background-color: #bffaf7;
-	padding: 5px;
+    padding: 10px 20px;
+    font-weight: 600;
+    text-decoration: none;
+}
 
-  }
+.navi a:hover {
+	background-color: #bbb;
+    color: #1319d2;
+}
+
+.navi.open a {
+	display: block;
+}
+
+h1 {
+    font-family: "Briem Hand", cursive;
+    text-align: center;
+    margin: 0;
+}
+
+h2 {
+    font-family: "Briem Hand", cursive;
+    text-align: center;
+}
 
   #myBtn {
     display: none;
@@ -113,38 +97,91 @@ footer{
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 16px;
     padding: 16px;
-    width: 100%;
     max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Styles for each temple card */
 .temple-card {
     border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius: 12px;
     padding: 16px;
     text-align: center;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    overflow: hidden;
+    position: relative;
 }
 
 .temple-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .temple-card img {
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
 }
 
-/* Responsive text sizes */
+.temple-card:hover img {
+    transform: scale(1.05);
+}
+
 .temple-card h2 {
-    font-size: 1.5em;
+    font-size: 1.8em;
     margin: 16px 0 8px;
+    color: #333;
 }
 
 .temple-card p {
     font-size: 1em;
     margin: 8px 0;
+    color: #666;
+}
+
+.temple-card::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 223, 186, 0.3), rgba(255, 223, 186, 0));
+    border-radius: 50%;
+    z-index: -1;
+    transition: all 0.5s ease;
+}
+
+.temple-card:hover::before {
+    transform: scale(1.5);
+}
+
+footer{
+	text-align: center;
+    padding: 20px 0;
+    background: linear-gradient(135deg, #bffaf7, #e0f7fa);
+    color: #333;
+    font-family: 'Jaro', sans-serif;
+    border-top: 1px solid #ccc;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+
+  footer p {
+    margin: 5px 0;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+footer p:hover {
+    color: #1319d2;
+}
+
+footer p span {
+    font-weight: bold;
+    color: #ff6f61;
+    font-family: 'Briem Hand', cursive;
 }
