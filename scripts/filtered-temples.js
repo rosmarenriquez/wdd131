@@ -107,6 +107,22 @@ function scrollFunction() {
       imageUrl:
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/freiberg-germany/400x250/freiberg-germany-temple-lds-664670-wallpaper.jpg"
     },
+    {
+      templeName: "Bogotá Colombia",
+      location: "Bogotá, Colombia",
+      dedicated: "1999, April, 24",
+      area: 53500,
+      imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/bogota-colombia/400x250/bogota-colombia-temple-lds-1029726-wallpaper.jpg"
+    },
+    {
+      templeName: "Rome Italy",
+      location: "Rome, Italy",
+      dedicated: "2019, March, 10",
+      area: 41010,
+      imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/2019/400x250/4-Rome-Temple-2160935.jpg"
+    },
   ];
 
   // Function to create a temple card
@@ -129,7 +145,7 @@ function scrollFunction() {
     dedicationDate.textContent = `Dedicated: ${temple.dedicated}`;
 
     const totalArea = document.createElement('p');
-    totalArea.textContent = `Area: ${temple.area}`;
+    totalArea.textContent = `Area: ${temple.area} sq ft`;
 
     card.appendChild(img);
     card.appendChild(name);
