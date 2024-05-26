@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Submitted</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+    <h1>Review Submitted Successfully!</h1>
+    <p>Thank you for your feedback.</p>
+    <footer>
+        <p>&copy;<span id="currentYear"></span> | Rosmar Enriquez | Mexico </p>
+        <p id="lastModified"></p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let reviewCount = localStorage.getItem('reviewCount') || 0;
+            reviewCount++;
+            localStorage.setItem('reviewCount', reviewCount);
+            console.log(`Total reviews submitted: ${reviewCount}`);
+        });
+    </script>
+</body>
+</html>
